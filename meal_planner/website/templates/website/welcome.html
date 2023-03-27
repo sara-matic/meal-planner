@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} Meal Planner {% endblock %}
+
+{% block content %}
+<div class="mytext">
+    <h1>Welcome To Your Own Meal Planner</h1>
+
+    <h2>Your meals</h2>
+        <h3>Breakfast</h3>
+        <ul>
+            {% for b in breakfast %}
+            <li>
+                 {{ b.date|date:'l, M d, Y' }}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Lunch</h3>
+        <ul>
+            {% for l in lunch %}
+            <li>
+                {{ l.date|date:'l, M d, Y' }}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Dinner</h3>
+        <ul>
+            {% for d in dinner %}
+            <li>
+                {{ d.date|date:'l, M d, Y' }}
+            </li>
+            {% endfor %}
+        </ul>
+
+</div>
+{% endblock %}
