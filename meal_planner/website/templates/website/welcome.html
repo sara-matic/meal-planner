@@ -6,9 +6,12 @@
 <div class="mytext">
     <h1>Welcome To Your Own Meal Planner</h1>
 
-    <h2>Your meals</h2>
+    <h2>*Your meals*</h2>
 
-        <h3>Breakfast</h3>
+    <h3>Breakfast</h3>
+    <button onclick="window.location.href='{% url 'new_breakfast' %}';">
+      Add Breakfast
+    </button>
         <ul>
             {% for b in breakfast %}
             <li>
@@ -19,7 +22,10 @@
             {% endfor %}
         </ul>
 
-        <h3>Lunch</h3>
+    <h3>Lunch</h3>
+    <button onclick="window.location.href='{% url 'new_lunch' %}';">
+      Add Lunch
+    </button>
         <ul>
             {% for l in lunch %}
             <li>
@@ -31,7 +37,10 @@
 
         </ul>
 
-        <h3>Dinner</h3>
+    <h3>Dinner</h3>
+    <button onclick="window.location.href='{% url 'new_dinner' %}';">
+      Add Dinner
+    </button>
         <ul>
             {% for d in dinner %}
             <li>
