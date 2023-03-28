@@ -12,7 +12,9 @@
         <ul>
             {% for b in breakfast %}
             <li>
+                <a href="{% url 'breakfast' b.id %}">
                  {{ b.date|date:'l, M d, Y' }}
+                </a>
             </li>
             {% endfor %}
         </ul>
@@ -21,7 +23,9 @@
         <ul>
             {% for l in lunch %}
             <li>
+                <a href="{% url 'lunch' l.id %}">
                 {{ l.date|date:'l, M d, Y' }}
+                </a>
             </li>
             {% endfor %}
 
@@ -31,7 +35,9 @@
         <ul>
             {% for d in dinner %}
             <li>
+                <a href="{% url 'dinner' d.id %}">
                 {{ d.date|date:'l, M d, Y' }}
+                </a>
             </li>
             {% endfor %}
         </ul>
