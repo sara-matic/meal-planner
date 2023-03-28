@@ -7,6 +7,7 @@
     <h1>Welcome To Your Own Meal Planner</h1>
 
     <h2>Your meals</h2>
+
         <h3>Breakfast</h3>
         <ul>
             {% for b in breakfast %}
@@ -23,6 +24,7 @@
                 {{ l.date|date:'l, M d, Y' }}
             </li>
             {% endfor %}
+
         </ul>
 
         <h3>Dinner</h3>

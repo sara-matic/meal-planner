@@ -1,0 +1,18 @@
+{% extends "meals_base.html" %}
+
+{% block title %} Meal Planner {% endblock %}
+
+{% block content %}
+<div class="mytext">
+
+    <h1>Meal Details</h1>
+
+    <h2>Dinner on {{ dinner.date|date:'l, M d, Y' }}: </h2>
+    <ul>
+    {% for d in dinner.meal.all %}
+        <li><h3>{{ d }} </h3></li>
+    {% endfor %}
+    </ul>
+
+</div>
+{% endblock %}

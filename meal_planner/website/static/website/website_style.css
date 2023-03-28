@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    color: black;
+    background-image: url("food.jpg");
+    font-family: Comic Sans MS";
+}
+
+h1{
+    text-align: center;
+}
+
+.mytext {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 50px;
+    padding: 20px;
+}
