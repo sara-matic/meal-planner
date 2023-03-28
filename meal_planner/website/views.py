@@ -4,6 +4,7 @@ from meals.models import Breakfast, Lunch, Dinner
 
 def welcome(request):
     return render(request, "website/welcome.html",
-                  {"breakfast": Breakfast.objects.all(),
-                   "lunch": Lunch.objects.all(),
-                   "dinner": Dinner.objects.all()})
+                  {"breakfast": Breakfast.objects.order_by('date'),
+                   "lunch": Lunch.objects.order_by('date'),
+                   "dinner": Dinner.objects.order_by('date')})
+

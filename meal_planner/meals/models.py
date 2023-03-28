@@ -25,7 +25,7 @@ class Lunch(models.Model):
     date = models.DateField(unique=True)
 
     def __str__(self):
-        lunch = f"Lunch on {self.date.strftime('%A, %b %d, %Y')}: * "
+        lunch = f"Lunch on {self.date.strftime('%A, %b %d, %Y')}: \n* "
         for m in self.meal.all():
             lunch += f"{str(m)} * "
         return lunch
