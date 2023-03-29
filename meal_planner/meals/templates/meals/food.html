@@ -1,0 +1,24 @@
+{% extends "meals_base.html" %}
+
+{% block title %} Meal Planner {% endblock %}
+
+{% block content %}
+<div class="mytext">
+
+    <h1>My Food</h1>
+
+    <button onclick="window.location.href='{% url 'new_food' %}';">
+      Add Food
+    </button>
+
+    <ul>
+    {% for f in food %}
+        <li><h3>{{ f }} </h3></li>
+    {% endfor %}
+    </ul>
+
+    <a href="{% url 'welcome' %}">
+        Home
+    </a>
+</div>
+{% endblock %}

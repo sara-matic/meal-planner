@@ -1,0 +1,19 @@
+{% extends "meals_base.html" %}
+
+{% block title %}Delete Meal:{% endblock %}
+
+{% block content %}
+<div class="mytext">
+<h1>Delete {{ meal_name }}</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>Are you sure?</p>
+
+    <button type="submit">Yes</button>
+
+    <a href="{% url view_function_name meal.id %}">No, take me back</a>
+
+
+</form>
+</div>
+{% endblock %}
