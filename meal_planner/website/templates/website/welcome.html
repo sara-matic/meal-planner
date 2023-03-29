@@ -5,7 +5,7 @@
 {% block content %}
 <div class="mytext">
     <h1>Welcome To Your Own Meal Planner</h1>
-
+<div class ="child left">
     <h2>*Your meals*</h2>
 
     <h3>Breakfast</h3>
@@ -50,6 +50,17 @@
             </li>
             {% endfor %}
         </ul>
+</div>
+
+<div class="child right">
+
+    <h2>
+        <a href="{% url 'food' %}">
+        All Your Food
+        </a>
+    </h2>
+
+</div>
 
 </div>
 {% endblock %}

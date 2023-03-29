@@ -3,7 +3,7 @@ from django.forms import ModelForm, DateInput, TimeInput, TextInput, IntegerFiel
     ModelMultipleChoiceField
 from django.core.exceptions import ValidationError
 
-from meals.models import Breakfast, Lunch, Dinner
+from meals.models import Breakfast, Lunch, Dinner, Food
 
 
 class BreakfastForm(ModelForm):
@@ -47,3 +47,8 @@ class DinnerForm(ModelForm):
         if d < date.today():
             raise ValidationError("Meals cannot be in the past!")
         return d
+
+class FoodForm(ModelForm):
+    class Meta:
+        model = Food
+        fields = '__all__'
