@@ -12,8 +12,12 @@
     </button>
 
     <ul>
-    {% for f in food %}
-        <li><h3>{{ f }} </h3></li>
+    {% for f in all_food %}
+        <li><h3>
+            <a href="{% url 'food' f.id%}">
+            {{ f }}
+            </a>
+        </h3></li>
     {% endfor %}
     </ul>
 

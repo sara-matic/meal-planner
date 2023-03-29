@@ -1,0 +1,23 @@
+{% extends "meals_base.html" %}
+
+{% block title %} Meal Planner {% endblock %}
+
+{% block content %}
+<div class="mytext">
+
+    <h1>{{ food_name }}</h1>
+
+
+    <button onclick="window.location.href='{% url 'edit_food' food.id %}';">
+      Edit Food
+    </button>
+
+    <button onclick="window.location.href='{% url 'delete_food' food.id %}';">
+      Delete Food
+    </button>
+
+    <a href="{% url 'welcome' %}">
+        Home
+    </a>
+</div>
+{% endblock %}
