@@ -14,6 +14,14 @@
     {% endfor %}
     </ul>
 
+    <button onclick="window.location.href='{% url 'edit_dinner' dinner.id %}';">
+      Edit Dinner
+    </button>
+
+    <button onclick="window.location.href='{% url 'delete_dinner' dinner.id %}';">
+      Delete Dinner
+    </button>
+
  <a href="{% url 'welcome' %}">
         Home
     </a>
